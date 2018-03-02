@@ -1,0 +1,108 @@
+ Design
+
+* Poly is a list of Term objects
+*
+* >>>> polynomial Class
+*
+*   -add(poly2):
+*       add two polys and return a new poly
+*       will need a function that will check if two terms are equal or not
+*
+*       for each term1 in poly1
+*           for each term2 in poly2
+*               if term1 = term2
+*                   term1.coef + term2.coef
+
+EquTerm(Term term2)
+Not equal if:
+ - if there is var not exist on another term
+ - if there is var exist in another term but has different exponential
+ -
+*
+*   -subtract(poly2):
+ *       add two polys and return a new poly
+ *       will need a function that will check if two terms are equal or not
+ *
+ *       for each term1 in poly1
+ *           for each term2 in poly2
+ *               if term1 = term2
+ *                   term1.coef - term2.coef
+ *
+ *
+ *   -toString: //make the polynomial to string
+ *
+ *
+ *   -mult(poly2):
+ *
+ *
+ *   -evaluate
+ *
+ *   ------------------------------
+ *   >>> Term Class
+ *
+ *   Desc: this class will contains coeffiecients, variables, and exponentials of the term
+ *
+ *          Methods:
+ *
+ *          nextTermFrom //parse the term
+ *
+ *          to_String  // make the term in a String form
+*
+
+3xy^3+4z
+6y^3x+3z^2-5
+
+-4y^3+4x-9
+-v^2-4x+5
+
+
+
+
+Scanner scanner = new Scanner(System.in);
+        boolean exit = true;
+
+        while (!exit){
+            System.out.print("Enter the first polynomial: ");
+            String poly1 = scanner.nextLine();
+
+            System.out.print("Enter the second polynomial: ");
+            String poly2 = scanner.nextLine();
+
+            System.out.println("poly1: " + poly1);
+            System.out.println("poly2: " + poly2);
+
+            polynomial p = new polynomial(poly1);
+            polynomial p2 = new polynomial(poly2);
+
+
+            System.out.println("Enter 1 for addtion");
+            System.out.println("Enter 2 for subtraction");
+            System.out.print("Enter 3 for multiplication \t:");
+            int choice = scanner.nextInt();
+
+            if (choice == 1){
+                polynomial p3 = p.add(p2);
+                p3.to_string();
+            }else if(choice == 2){
+                polynomial p3 = p.sub(p2);
+                p3.to_string();
+            }else if(choice == 3){
+                polynomial p3 = p.mult(p2);
+                p3.to_string();
+            }else{
+                System.out.println("Invalid Input!");
+            }
+
+            System.out.print("Enter 1 to continue or 0 to exit: ");
+            int ext = scanner.nextInt();
+            if(ext == 0) {
+                exit = true;
+            }
+
+        }
+
+
+        if the sum is zero!!!
+        if (termPoly1.coef+termPoly2.coef == 0){
+
+                                }

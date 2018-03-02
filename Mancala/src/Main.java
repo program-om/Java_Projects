@@ -18,7 +18,8 @@ public class Main {
             playAgain = false;
 
             players[0].displayCups();
-            System.out.println(players[1].getMancala().getStones() + "\t\t\t\t\t\t\t" + players[0].getMancala().getStones());
+            System.out.println(players[1].getMancala().getStones() +
+                    "\t\t\t\t\t\t\t" + players[0].getMancala().getStones());
             players[1].reverseDisplayReverseCups();
             System.out.println();
             System.out.println("Player " + turn + " :");
@@ -50,12 +51,9 @@ public class Main {
     static int  h(int cupChosen, int turn, int stonesLeft) {
 
         //int stonesLeft;
-        stonesLeft = players[turn].distributeStones(stonesLeft, cupChosen);
+        stonesLeft = players[turn].distributeStones(stonesLeft, cupChosen, true);
         if (players[turn].lastStoneIndex != -1){
-            int stonesMove = players[(turn+1)%2].getCup(5-(players[turn].lastStoneIndex)).numberOfStones();
-            System.out.println(stonesMove);
-            //players[(turn+1)%2].emptyCup(players[turn].lastStoneIndex);
-            players[turn].mancala.addStones(stonesMove);
+            stonesToMancala(turn);
         }
         //add one to mancala 1
         if (stonesLeft > 0){
@@ -65,7 +63,7 @@ public class Main {
             if (stonesLeft == 0)
                 playAgain = true;
         }
-        stonesLeft = players[(turn+1)%2].distributeStones(stonesLeft, 0);
+        stonesLeft = players[(turn+1)%2].distributeStones(stonesLeft, 0, false);
         //add one to mancal 2
         if (stonesLeft > 0) {
             players[(turn + 1) % 2].addStoneToMancala();
@@ -73,5 +71,15 @@ public class Main {
         }
 
         return stonesLeft;
+    }
+
+    private static void stonesToMancala(int turn) {
+        int stonesMove = players[(turn+1)%2].getCup(5-(players[turn].lastStoneIndex)).numberOfStones();
+        System.out.println(stonesMove);
+        if (turn == 1)
+            players[(turn+1)%2].emptyCup(players[turn].lastStoneIndex-1);
+        else
+            players[(turn+1)%2].emptyCup(players[turn].lastStoneIndex+1);
+        players[turn].mancala.addStones(stonesMove);
     }
 }

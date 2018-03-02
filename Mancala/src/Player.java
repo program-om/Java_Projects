@@ -68,11 +68,11 @@ public class Player {
         System.out.print(mancala.getStones());
     }
 
-    int distributeStones(int n, int index){
+    int distributeStones(int n, int index, boolean check){
         int i;
         for(i=index; i < cups.length; i++){
             if (n > 0) {
-                if (n == 1 && cups[i].numberOfStones() == 0){
+                if (n == 1 && cups[i].numberOfStones() == 0 && check){
                     cups[i].addStone();
                     n--;
                     lastStoneIndex = i;
