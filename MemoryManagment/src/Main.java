@@ -32,17 +32,19 @@ public class Main {
             pagesList.add(page);
             //System.out.println(line);
         }
-        
+
         for (Page pg:
              pagesList) {
             System.out.println(pg.processNum + " " + pg.pageNum);
         }
 
-        FIFO fifo = new FIFO(pagesList);
-        LRU lru = new LRU(pagesList);
-        OPT opt = new OPT(pagesList);
 
-//        System.out.println("Page fault in FIFO strategy: " + fifo.pageFaults(framesSize));
+
+        FIFO fifo = new FIFO(pagesList);
+//        LRU lru = new LRU(pagesList);
+//        OPT opt = new OPT(pagesList);
+
+        System.out.println("Page fault in FIFO strategy: " + fifo.pageFaults(framesSize));
 //        System.out.println("Page fault in LRU strategy: " + lru.pageFaults(framesSize));
 //        System.out.println("Page fault in OPT strategy: " + opt.pageFaults(framesSize));
 

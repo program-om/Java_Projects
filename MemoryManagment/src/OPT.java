@@ -6,9 +6,5 @@ public class OPT {
         pages = pagesList;
     }
 
-    public int pageFaults(){
-        int pFaults = 0;
 
-        return pFaults;
-    }
 }
