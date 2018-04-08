@@ -9,7 +9,7 @@ public class Player {
         mancala.addStone();
     }
 
-     Mancala mancala;
+    Mancala mancala;
 
     public Cup getCup(int i) {
         return cups[i];
@@ -27,7 +27,7 @@ public class Player {
         }
     }
 
-    boolean EmptyCups(){
+    boolean emptyCups(){
         //return true if all the cups are empty
         //       false if not
         for (Cup each:
@@ -64,9 +64,9 @@ public class Player {
         System.out.println();
     }
 
-    void displayMancala(){
-        System.out.print(mancala.getStones());
-    }
+//    void displayMancala(){
+//        System.out.print(mancala.getStones());
+//    }
 
     int distributeStones(int n, int index, boolean check){
         int i;

@@ -1,4 +1,8 @@
 public class Mancala {
+    public Mancala(){
+        Stones = 0;
+    }
+
     public void addStones(int stones) {
         Stones += stones;
     }
@@ -7,10 +11,6 @@ public class Mancala {
 
     int getStones(){
         return Stones;
-    }
-
-    Mancala(){
-        Stones = 0;
     }
 
     void addStone(){
