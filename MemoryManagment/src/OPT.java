@@ -12,7 +12,6 @@ public class OPT {
 
         Memory memory = new Memory(frameSize);
 
-
         int pageOrder = 1;
         int j =0 ;
         Page thisPage;
@@ -34,7 +33,6 @@ public class OPT {
                 }
             }
 
-
             System.out.println("-----------");
             for (Frame f:
                     memory.frames) {
@@ -48,17 +46,34 @@ public class OPT {
 
     private int lessLikelyInFutre(Frame[] frames, Memory mem, int startIndex){
 
-        int minIndex = 0;
-        int min = frames[minIndex].orderOfLastAccess;
+        int min, minIndex=0;
+        int futurePages = frames.length - startIndex - 1;//number of pages in the future that
+                                                        //that we need to search in
+        int[] lastSeen = new int[frames.length];
+        for (int each:
+             lastSeen) {
+            each = -1;
+        }
 
-        for (int i=pages.size()-1; i >= startIndex ; i--){
+        //for(int j=0; j < frames.length; j++) {
+        //here each page in the frame will know where is the last time it will be seen
+        for (int i = pages.size() - 1; i >= startIndex; i--) {
             //is this page in memory
             int indexInMemory = mem.IsInMemory(pages.get(i));
-            if(indexInMemory != -1){
-                return indexInMemory;
+            if (indexInMemory != -1) {
+                lastSeen[indexInMemory] = i;
+                break;
             }
         }
-        //not found in the future
-        return 0; //will replace the page on top!
+        //}
+
+        min = lastSeen[minIndex];
+        for (int i=0; i < lastSeen.length; i++) {
+            if (lastSeen[i] < min){
+                min = lastSeen[i];
+                minIndex = i;
+            }
+        }
+        return minIndex;
     }
 }
