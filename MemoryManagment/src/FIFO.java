@@ -9,11 +9,9 @@ public class FIFO {
 
     public int pageFaults(int frameSize){
         int pFaults = 0;
-
         Memory memory = new Memory(frameSize);
-
-
         int pageOrder = 1;
+
         for (Page thisPage:
              pages) {
 
@@ -23,24 +21,14 @@ public class FIFO {
                 memory.frames[minOrder].page = thisPage;
                 memory.frames[minOrder].orderOfLastAccess = pageOrder;
                 pFaults++;
-            } else{//if in memory
-
-                //memory.frames[pageInMemory].orderOfLastAccess = pageOrder;
             }
-
-            System.out.println("-----------");
-            for (Frame f:
-                 memory.frames) {
-                System.out.println(f.page.processNum + " " + f.page.pageNum);
-            }
-
             pageOrder++;
         }
 
         return pFaults;
     }
 
-    int findMinOrder(Frame[] frames){
+    private int findMinOrder(Frame[] frames){
         int minIndex = 0;
         int min = frames[minIndex].orderOfLastAccess;
 
@@ -52,6 +40,5 @@ public class FIFO {
         }
         return minIndex;
     }
-
 
 }

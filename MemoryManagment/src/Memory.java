@@ -13,11 +13,11 @@ public class Memory {
     // will return -1 if not in memory
     int IsInMemory(Page page){
         int foundIndex = -1;
-        for(int i=0; i < frames.length; i++){
-            if(frames[i].page.processNum == page.processNum &&
-                    frames[i].page.pageNum == page.pageNum){
-                return i;
-            }
+            for(int i=0; i < frames.length; i++){
+                if(frames[i].page.processNum == page.processNum &&
+                        frames[i].page.pageNum == page.pageNum){
+                    return i;
+                }
         }
         return foundIndex;
     }

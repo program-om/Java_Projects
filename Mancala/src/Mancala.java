@@ -1,13 +1,13 @@
-public class Mancala {
-    public Mancala(){
+class Mancala {
+    private int Stones;
+
+    Mancala(){
         Stones = 0;
     }
 
-    public void addStones(int stones) {
+    void addStones(int stones) {
         Stones += stones;
     }
-
-    private int Stones;
 
     int getStones(){
         return Stones;

@@ -1,24 +1,12 @@
-public class Cup {
-
-    Cup(int n){
-        StonesNum = n;
-    }
-    public void setStonesNum(int stonesNum) {
-        StonesNum = stonesNum;
-    }
-
+class Cup {
     private int StonesNum;
 
     Cup(){
-        StonesNum = 5;
+        StonesNum = 4;
     }
 
     void addStone(){
         StonesNum++;
-    }
-
-    void removeStone(){
-        StonesNum--;
     }
 
     int numberOfStones(){

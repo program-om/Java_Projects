@@ -28,19 +28,13 @@ public class LRU {
                 memory.frames[pageInMemory].orderOfLastAccess = pageOrder;
             }
 
-            System.out.println("-----------");
-            for (Frame f:
-                    memory.frames) {
-                System.out.println(f.page.processNum + " " + f.page.pageNum);
-            }
-
             pageOrder++;
         }
 
         return pFaults;
     }
 
-    int findMinOrder(Frame[] frames){
+    private int findMinOrder(Frame[] frames){
         int minIndex = 0;
         int min = frames[minIndex].orderOfLastAccess;
 

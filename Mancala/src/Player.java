@@ -1,6 +1,18 @@
-import java.util.ArrayList;
+class Player {
 
-public class Player {
+    private Cup[] cups;
+    public int lastStoneIndex = -1;
+    Mancala mancala;
+
+    Player(){
+        mancala = new Mancala();
+        cups = new Cup[6];
+
+        for (int i=0; i < cups.length; i++){
+            cups[i] = new Cup();
+        }
+    }
+
     public Mancala getMancala() {
         return mancala;
     }
@@ -9,22 +21,8 @@ public class Player {
         mancala.addStone();
     }
 
-    Mancala mancala;
-
     public Cup getCup(int i) {
         return cups[i];
-    }
-
-    private Cup[] cups;
-    public int lastStoneIndex = -1;
-
-    Player(){
-        //cups = new Cup[6];
-        mancala = new Mancala();
-        cups = new Cup[6];
-        for (int i=0; i < cups.length; i++){
-            cups[i] = new Cup();
-        }
     }
 
     boolean emptyCups(){
@@ -37,10 +35,6 @@ public class Player {
             }
         }
         return true;
-    }
-
-    void addStoneToCup(int stoneNum){
-        cups[stoneNum].addStone();
     }
 
     int emptyCup(int stoneNum){ //make a cup empty and get all the stones from it.
@@ -64,13 +58,10 @@ public class Player {
         System.out.println();
     }
 
-//    void displayMancala(){
-//        System.out.print(mancala.getStones());
-//    }
-
     int distributeStones(int n, int index, boolean check){
         int i;
-        for(i=index; i < cups.length; i++){
+
+        for(i=index-2; i >= 0; i--){
             if (n > 0) {
                 if (n == 1 && cups[i].numberOfStones() == 0 && check){
                     cups[i].addStone();
@@ -87,4 +78,5 @@ public class Player {
 
         return n;
     }
+
 }
