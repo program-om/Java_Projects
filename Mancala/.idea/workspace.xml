@@ -15,8 +15,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="210">
+              <caret line="14" column="47" lean-forward="false" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -25,10 +25,13 @@
       <file leaf-file-name="Board.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="56" column="28" lean-forward="true" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
+            <state relative-caret-position="210">
+              <caret line="134" column="1" lean-forward="true" selection-start-line="134" selection-start-column="1" selection-end-line="134" selection-end-column="1" />
               <folding>
+                <element signature="method#Board#0;class#Board#0" expanded="false" />
                 <element signature="method#displayBoard#0;class#Board#0" expanded="false" />
+                <element signature="method#moveStones#0;class#Board#0" expanded="false" />
+                <element signature="method#stonesToMancala#0;class#Board#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -60,14 +63,15 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="430">
+              <caret line="85" column="12" lean-forward="false" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="12" />
               <folding>
                 <element signature="method#Player#0;class#Player#0" expanded="false" />
                 <element signature="method#emptyCups#0;class#Player#0" expanded="false" />
-                <element signature="e#910#911#0" expanded="true" />
                 <element signature="method#displayCups#0;class#Player#0" expanded="false" />
                 <element signature="method#reverseDisplayReverseCups#0;class#Player#0" expanded="false" />
+                <element signature="method#distributeStones#0;class#Player#0" expanded="false" />
+                <element signature="method#freeCups#0;class#Player#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -87,8 +91,10 @@
       <find>display</find>
       <find>displayM</find>
       <find>emptyCups</find>
-      <find>addStone</find>
       <find>distributeStones</find>
+      <find>addStone</find>
+      <find>lastStoneIndex</find>
+      <find>addStoneToMancala</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -298,12 +304,12 @@
       <workItem from="1520007804597" duration="3792000" />
       <workItem from="1522773770327" duration="2047000" />
       <workItem from="1524576818786" duration="6281000" />
-      <workItem from="1524700417102" duration="3396000" />
+      <workItem from="1524700417102" duration="15051000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39607000" />
+    <option name="totallyTimeSpent" value="51262000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -317,7 +323,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33294117" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37294117" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -346,38 +352,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Board.java</url>
-          <line>100</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Player.java</url>
-          <line>63</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Board.java</url>
-          <line>94</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Board.java</url>
-          <line>103</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Board.java</url>
-          <line>41</line>
-          <properties />
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
@@ -417,9 +391,10 @@
           <folding>
             <element signature="method#Player#0;class#Player#0" expanded="false" />
             <element signature="method#emptyCups#0;class#Player#0" expanded="false" />
-            <element signature="e#910#911#0" expanded="true" />
             <element signature="method#displayCups#0;class#Player#0" expanded="false" />
             <element signature="method#reverseDisplayReverseCups#0;class#Player#0" expanded="false" />
+            <element signature="method#distributeStones#0;class#Player#0" expanded="false" />
+            <element signature="method#freeCups#0;class#Player#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -429,7 +404,10 @@
         <state relative-caret-position="675">
           <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
+            <element signature="method#Board#0;class#Board#0" expanded="false" />
             <element signature="method#displayBoard#0;class#Board#0" expanded="false" />
+            <element signature="method#moveStones#0;class#Board#0" expanded="false" />
+            <element signature="method#stonesToMancala#0;class#Board#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -468,9 +446,10 @@
           <folding>
             <element signature="method#Player#0;class#Player#0" expanded="false" />
             <element signature="method#emptyCups#0;class#Player#0" expanded="false" />
-            <element signature="e#910#911#0" expanded="true" />
             <element signature="method#displayCups#0;class#Player#0" expanded="false" />
             <element signature="method#reverseDisplayReverseCups#0;class#Player#0" expanded="false" />
+            <element signature="method#distributeStones#0;class#Player#0" expanded="false" />
+            <element signature="method#freeCups#0;class#Player#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -509,9 +488,10 @@
           <folding>
             <element signature="method#Player#0;class#Player#0" expanded="false" />
             <element signature="method#emptyCups#0;class#Player#0" expanded="false" />
-            <element signature="e#910#911#0" expanded="true" />
             <element signature="method#displayCups#0;class#Player#0" expanded="false" />
             <element signature="method#reverseDisplayReverseCups#0;class#Player#0" expanded="false" />
+            <element signature="method#distributeStones#0;class#Player#0" expanded="false" />
+            <element signature="method#freeCups#0;class#Player#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -542,9 +522,10 @@
           <folding>
             <element signature="method#Player#0;class#Player#0" expanded="false" />
             <element signature="method#emptyCups#0;class#Player#0" expanded="false" />
-            <element signature="e#910#911#0" expanded="true" />
             <element signature="method#displayCups#0;class#Player#0" expanded="false" />
             <element signature="method#reverseDisplayReverseCups#0;class#Player#0" expanded="false" />
+            <element signature="method#distributeStones#0;class#Player#0" expanded="false" />
+            <element signature="method#freeCups#0;class#Player#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -591,9 +572,10 @@
           <folding>
             <element signature="method#Player#0;class#Player#0" expanded="false" />
             <element signature="method#emptyCups#0;class#Player#0" expanded="false" />
-            <element signature="e#910#911#0" expanded="true" />
             <element signature="method#displayCups#0;class#Player#0" expanded="false" />
             <element signature="method#reverseDisplayReverseCups#0;class#Player#0" expanded="false" />
+            <element signature="method#distributeStones#0;class#Player#0" expanded="false" />
+            <element signature="method#freeCups#0;class#Player#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -632,9 +614,10 @@
           <folding>
             <element signature="method#Player#0;class#Player#0" expanded="false" />
             <element signature="method#emptyCups#0;class#Player#0" expanded="false" />
-            <element signature="e#910#911#0" expanded="true" />
             <element signature="method#displayCups#0;class#Player#0" expanded="false" />
             <element signature="method#reverseDisplayReverseCups#0;class#Player#0" expanded="false" />
+            <element signature="method#distributeStones#0;class#Player#0" expanded="false" />
+            <element signature="method#freeCups#0;class#Player#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -673,9 +656,10 @@
           <folding>
             <element signature="method#Player#0;class#Player#0" expanded="false" />
             <element signature="method#emptyCups#0;class#Player#0" expanded="false" />
-            <element signature="e#910#911#0" expanded="true" />
             <element signature="method#displayCups#0;class#Player#0" expanded="false" />
             <element signature="method#reverseDisplayReverseCups#0;class#Player#0" expanded="false" />
+            <element signature="method#distributeStones#0;class#Player#0" expanded="false" />
+            <element signature="method#freeCups#0;class#Player#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -685,22 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Mancala.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -716,26 +684,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="47" lean-forward="false" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mancala.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="430">
+          <caret line="85" column="12" lean-forward="false" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="12" />
           <folding>
             <element signature="method#Player#0;class#Player#0" expanded="false" />
             <element signature="method#emptyCups#0;class#Player#0" expanded="false" />
-            <element signature="e#910#911#0" expanded="true" />
             <element signature="method#displayCups#0;class#Player#0" expanded="false" />
             <element signature="method#reverseDisplayReverseCups#0;class#Player#0" expanded="false" />
+            <element signature="method#distributeStones#0;class#Player#0" expanded="false" />
+            <element signature="method#freeCups#0;class#Player#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="56" column="28" lean-forward="true" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
+        <state relative-caret-position="210">
+          <caret line="134" column="1" lean-forward="true" selection-start-line="134" selection-start-column="1" selection-end-line="134" selection-end-column="1" />
           <folding>
+            <element signature="method#Board#0;class#Board#0" expanded="false" />
             <element signature="method#displayBoard#0;class#Board#0" expanded="false" />
+            <element signature="method#moveStones#0;class#Board#0" expanded="false" />
+            <element signature="method#stonesToMancala#0;class#Board#0" expanded="false" />
           </folding>
         </state>
       </provider>

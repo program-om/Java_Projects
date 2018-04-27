@@ -79,4 +79,14 @@ class Player {
         return n;
     }
 
+    int getMancalaStones(){
+        return mancala.getStones();
+    }
+
+    void freeCups(){//free all the cups and move stones to player's mancala
+        for(int i=0; i < 6; i++){
+            mancala.addStones(emptyCup(i));
+        }
+    }
+
 }

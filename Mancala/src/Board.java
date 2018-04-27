@@ -7,12 +7,12 @@ class Board {
     Board(){
 
         Scanner scanner = new Scanner(System.in);
-        //Player[] players = new Player[2];
+
         players[0] = new Player();
         players[1] = new Player();
         int i = 0;
 
-        while (!players[0].emptyCups() || !players[1].emptyCups()){
+        while (!players[0].emptyCups() && !players[1].emptyCups()){
 
             int turn = (i%2)+1;
 
@@ -22,7 +22,7 @@ class Board {
             System.out.print("Choose one of the cups from 1 to 6 : ");
             int cupChosen = scanner.nextInt();
             scanner.nextLine();//this will get rid of the \n
-            if (cupChosen < 1 || cupChosen >6){
+            if (cupChosen < 1 || cupChosen > 6){
                 System.out.println("The chosen cup should be in the range 1 to 6!");
                 continue;
             }
@@ -59,22 +59,36 @@ class Board {
             }
 
         }
+
+        //capture all the stones
+        players[0].freeCups();
+        players[1].freeCups();
+        //the winner
+        System.out.println("player 1 stones = " + players[0].getMancalaStones());
+        System.out.println("player 2 stones = " + players[1].getMancalaStones());
+
+        if (players[0].getMancalaStones() > players[1].getMancalaStones()){
+            System.out.println("Player 1 won!");
+        } else if(players[0].getMancalaStones() < players[1].getMancalaStones()){
+            System.out.println("Player 2 won!");
+        } else{
+            System.out.println("Players tie!");
+        }
     }
 
     private void displayBoard(int turn) {
-        System.out.println("Mancala Game");
         System.out.println();
         System.out.println("\t\t  Player 1");
         for (int j=1; j < 7; j++){
             System.out.print("\t"+ j);
         }
         System.out.println();
-        System.out.println("-----------------------------");
+        System.out.println("<------------<--------------<");
         players[0].displayCups();
-        System.out.println(players[1].getMancala().getStones() +
-                "\t\t\t\t\t\t\t" + players[0].getMancala().getStones());
+        System.out.println(players[0].getMancala().getStones() +
+                "\t\t\t\t\t\t\t" + players[1].getMancala().getStones());
         players[1].reverseDisplayReverseCups();
-        System.out.println("-----------------------------");
+        System.out.println(">------------>-------------->");
         for (int j=6; j > 0; j--){
             System.out.print("\t"+ j);
         }
@@ -92,7 +106,7 @@ class Board {
         }
         //add one to mancala 1
         if (stonesLeft > 0){
-            players[(turn + 1) % 2].addStoneToMancala();
+            players[turn].addStoneToMancala();
             stonesLeft--;
 
             if (stonesLeft == 0)
@@ -101,7 +115,7 @@ class Board {
         stonesLeft = players[(turn+1)%2].distributeStones(stonesLeft, 7, false);
         //add one to mancala 2
         if (stonesLeft > 0) {
-            players[turn].addStoneToMancala();
+            players[(turn + 1) % 2].addStoneToMancala();
             stonesLeft--;
         }
 
@@ -110,11 +124,11 @@ class Board {
 
     private void stonesToMancala(int turn) {
         int stonesMove = players[(turn+1)%2].getCup(5-(players[turn].lastStoneIndex)).numberOfStones();
-        System.out.println(turn);
+
         if (turn == 0)
-            players[(turn+1)%2].emptyCup(players[turn].lastStoneIndex-1);
+            players[(turn+1)%2].emptyCup(5 - players[turn].lastStoneIndex);
         else
-            players[(turn+1)%2].emptyCup(players[turn].lastStoneIndex+1);
+            players[(turn+1)%2].emptyCup(5 - players[turn].lastStoneIndex);
         players[turn].mancala.addStones(stonesMove);
     }
 
