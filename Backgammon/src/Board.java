@@ -6,11 +6,11 @@ class Board {
     private Point[] points = new Point[24];
     private Player player1, player2;
     private Dice dice;
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_RED = "\u001B[31m";
-    public static final String ANSI_WHITE = "\u001B[37m";
-    public static final String ANSI_PURPLE = "\u001B[35m";
-    public static final String ANSI_YELLOW = "\u001B[33m";
+    private static final String ANSI_RESET = "\u001B[0m";
+    private static final String ANSI_RED = "\u001B[31m";
+    private static final String ANSI_WHITE = "\u001B[37m";
+    private static final String ANSI_PURPLE = "\u001B[35m";
+    private static final String ANSI_YELLOW = "\u001B[33m";
 
 
     Board() {
@@ -121,7 +121,7 @@ class Board {
 
     }
 
-    String changeColor(String color){
+    private String changeColor(String color){
         if (color.equals("red")){
             return ANSI_RED + color + ANSI_RESET;
         }else{
