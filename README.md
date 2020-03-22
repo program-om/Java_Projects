@@ -10,3 +10,5 @@ A group of java projects
 ### others
 - [x] Memory Management :white_check_mark:
 - [x] Polynomial :white_check_mark:
+- [x] Measurement :white_check_mark:
+
