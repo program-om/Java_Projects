@@ -6,6 +6,7 @@ A group of java projects
 - [x] Backgammon
 - [x] Connect 4 :white_check_mark:
 - [x] Gomokue :white_check_mark:
+- [x] Hunter Game :white_check_mark: : text game
 - [ ] Backgammon with GUI
 ### others
 - [x] Memory Management :white_check_mark:

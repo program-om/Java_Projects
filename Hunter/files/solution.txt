@@ -1,0 +1,34 @@
+Solution 1:
+go nw
+take riffle
+go se
+go n
+go n
+go n
+go nw
+hunt deer
+take deer
+go se
+go s
+go e
+go e
+cook deer
+eat deer
+
+---
+Solution 2:
+go nw
+take riffle
+go se
+go n
+go n
+go w
+go nw
+hunt deer
+take deer
+go se
+go e
+go e
+go e
+cook deer
+eat deer

@@ -1,0 +1,28 @@
+8
+arrow
+single broken arrow.
+---
+8
+bow
+single wooden bow.
+---
+4
+riffle
+long wooden riffle.
+---
+15
+deer
+alive deer is walking around 10 meters away from you.
+---
+17
+deer
+alive deer is walking around 7 meters away from you.
+---
+7
+bird
+large bird is standing on a tree branch.
+---
+13
+fire
+flaming fire that is enough for cooking.
+---

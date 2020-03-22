@@ -1,0 +1,77 @@
+1
+Rocky Valley
+You are striving to find something to eat in order to complete
+your trip before you die of hunger. There are few animals
+hanging around in this area.
+---
+2
+Dry River
+You are standing in front of a dry river that has not water.
+---
+3
+Flat passage
+You are at flat passage.
+---
+4
+Up-hill
+You are on top of a hill of 30 meters above the sea level.
+---
+5
+Mud road
+Dead end. This area is full of mud.
+---
+6
+Fork
+You are at a fork. One passage go to northeast and the other one to southeast.
+---
+7
+Dead end
+You are surrounded by big trees.
+---
+8
+East flat
+There is a passage to the southeast. You can go back to northwest.
+---
+9
+Dead end
+There is nothing here.
+---
+10
+Intersection
+Two paths cross each other at this point.
+---
+11
+Fork
+There are foot steps here. It seems that someone passed from here soon.
+There is a fork here. One passage go to northeast and the other to east.
+---
+12
+Dead end
+There is nothing here except bear bones.
+---
+13
+Camping spot
+Dead end surrounded by trees from each direction.
+---
+14
+Far North
+Abandoned tent is meters away from you.
+---
+15
+Dead end
+You are surrounded by long and old trees.
+---
+16
+Mid West
+One way passage to south. Another passage to northwest.
+---
+17
+Dead end
+Dead end. Bunch of trees are surrounding you.
+You hear the sound of stream of water but you can't
+identify of which direction it is coming from.
+---
+18
+Cliff
+Steep cliff in front of you.
+---
