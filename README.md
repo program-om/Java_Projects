@@ -9,6 +9,7 @@ A group of java projects
 - [x] Checkers :white_check_mark:
 - [x] Hunter Game :white_check_mark: : text game
 - [ ] Backgammon with GUI
+- [ ] Chess (almost complete)
 ### others
 - [x] Memory Management :white_check_mark:
 - [x] Polynomial :white_check_mark:
